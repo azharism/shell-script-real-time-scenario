@@ -59,4 +59,33 @@ echo "Network Statistics:"
 echo "$network_stats"
 ===============================================================================================================================
 
+zombie.sh-----------------------------------------
+
+#!/bin/bash
+
+# Function to find and kill zombie processes
+kill_zombies() {
+  zombies=$(ps aux | awk '$8=="Z" {print $2}')
+
+  if [ -z "$zombies" ]; then
+    echo "No zombie processes found."
+  else
+    echo "Zombie processes found. Killing them..."
+    # Iterate through each zombie process and attempt to kill it
+    for pid in $zombies; do
+      if ps -p "$pid" > /dev/null; then
+        kill -9 "$pid"
+        echo "Killed zombie process with PID $pid."
+      else
+        echo "Process with PID $pid not found. It may have already been terminated."
+      fi
+    done
+    echo "Zombie processes killed."
+  fi
+}
+
+# Call the function
+kill_zombies
+
+
 
