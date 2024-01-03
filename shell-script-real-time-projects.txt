@@ -14,3 +14,27 @@ shell-script real time scenario=============================================
 12.Write a shell script to automate the process of rotating log files and compressing old files to save disk space.
 13.Write a shell script to check the status of a list of URLs and send an email notification if any of them are down.
 14.Write a shell script to automate the process of updating a list of servers with the latest security patches.
+==================================================================================================================================
+1..
+#!/bin/bash
+
+# Function to find and kill zombie processes
+kill_zombies() {
+  # Use `ps` to list processes with status 'Z' (zombie)
+  zombies=$(ps aux | grep 'Z' | awk '{print $2}')
+
+  if [ -z "$zombies" ]; then
+    echo "No zombie processes found."
+  else
+    echo "Zombie processes found. Killing them..."
+    # Use `kill` to send a signal to each zombie process
+    kill -9 $zombies
+    echo "Zombie processes killed."
+  fi
+}
+
+# Call the function
+kill_zombies
+===================================================================================
+
+
