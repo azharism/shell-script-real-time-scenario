@@ -87,5 +87,23 @@ kill_zombies() {
 # Call the function
 kill_zombies
 
+=========================================================================================
+
+1. Can you explain how shell scripting fits into a larger DevOps workflow?
+2. What is the need for shell scripts when there are automation tools to do the work?
+3. In what scenarios would you opt for shell script rather than programming languages like Python or Golang?
+4. How would you approach writing a shell script to automate a particular task?
+5. How to do static analysis for Shell script?
+6. How do you ensure that shell scripts are error-free in your CI/CD pipeline?
+7. How can you handle errors and exceptions in shell scripts?
+8. Shell script to reverse a string
+9. Parse a log in the desired format and find all occurrences of a word
+10. Shell script to send the first ten lines of a file to another file.
+11. Merge(concatenate) two files and write the output to the third file.
+12. Find all duplicate strings in a file and replace them with another string
+13. Find all the IP addresses from a log file and write it to another file.
+14. How would you debug a shell script that isn’t working correctly?
+15. What is the difference between a “for” loop and a “while” loop in shell scripting?
+
 
 
